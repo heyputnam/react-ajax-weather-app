@@ -1,3 +1,5 @@
+
+//map styles come from the google engine https://mapstyle.withgoogle.com/
 const mapStyles = [
   {
     "elementType": "geometry",
