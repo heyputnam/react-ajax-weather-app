@@ -12,8 +12,13 @@ function App () {
   });
   async function getAppData() {
     const {lat, lng} = await getCurrentLatLng(); // await is like wait unil I'm done
-    // console.log('got app data')
-    // we need weather data
+    
+    const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
+    const API_KEY = '5b3c5a41e420b342a7d2e498f5e3fd82'
+
+    const weatherDAta = await fetch(`${BASE_URL}?lat=${lat}lon=${lng}&units=imperial&appid=${API_KEY}`)
+    .then(res => res.json());
+  
     // set component state to the received values
     setAppData({lat, lng})
   }
