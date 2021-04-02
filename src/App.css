@@ -17,3 +17,9 @@
   color: var(--text-color);
   opacity: 0.85;
 }
+
+/* selects the first child  */
+.App-header > img {
+  /* vm9in veiw port height and width min divided by 10 */
+  height: 10vmin;
+}
